@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/dateLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_date_corner">
+
+        <TextView
+            android:id="@+id/dateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:paddingTop="2dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="2dp"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimaryDark" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/senderLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="8dp"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/includeSenderLayout"
+            layout="@layout/chat_right_layout" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/receiverLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="40dp"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/includeReceiverLayout"
+            layout="@layout/chat_left_layout" />
+    </RelativeLayout>
+
+</LinearLayout>
